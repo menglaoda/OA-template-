@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			.template{
+				width: 100%;
+				height: 100vh;
+				border: solid 4px gold;
+				display: flex;
+			}
+			.template-left,.template-right{
+				width: 50%;
+				height: 100%;
+				padding: 20px;
+				background: #999;
+				color: white;
+			}
+			.template-left{
+				border-right: solid 2px white;
+			}
+			.template-content{
+				width: 400px;
+				padding: 100px 0px;
+				margin: 30px auto;
+				background: url(img/800.jpg) no-repeat center/100% 100%;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				
+			}
+			.logo{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+			}
+			.title-logo{
+				width: 90%;
+			}
+			.title-text{
+				background: url(img/2.png) center center/120%;
+				width: 100%;
+				height: 56px;
+				line-height: 56px;
+				color: white;
+				font-size: 20px;
+				margin: 20px 0px;
+				text-align: center;
+			}
+			.text1{
+				text-indent: 32px;
+				line-height: 24px;
+				width: 90%;
+				margin-bottom: 10px;
+			}
+			.set-list{
+				list-style: none;
+				overflow: hidden;
+				margin-top: 10px;
+			}
+			.set-list li{
+				margin-bottom: 10px;
+				font-size: 18px;
+				width: 50%;
+				float: left;
+				padding: 0px 30px;
+			}
+			.set-list input{
+				width: 100%;
+				height: 30px;
+				text-indent: 10px;
+			}
+			.set-list textarea{
+				width: 100%;
+				height: 100px;
+				resize: none;
+			}
+			.btn{
+				background: green;
+				color: white;
+				height: 30px;
+				width: 94%;
+				margin: 20px auto 0px;
+				display: block;
+				border: none;
+				border-radius: 20px;
+				font-size: 20px;
+			}
+			.btn:hover{
+				background: black;
+				color: red;
+			}
+		</style>
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="template">
+			<div class="template-left">
+				<h1>参数设置：</h1>
+				<ul class="set-list">
+					<li>
+						<p>容器宽度：</p>
+						<input class="boxwidth" type="text" value="400" />
+					</li>
+					<li>
+						<p>容器背景图：把图片放到项目里的img文件夹中，在下边的输入窗中输入图片名称及后缀</p>
+						<input class="boxbackground" type="text" value="800.jpg" />
+					</li>
+					<li>
+						<p>logo图片：把图片放到项目里的img文件夹中，在下边的输入窗中输入图片名称及后缀</p>
+						<input class="logosrc" type="text" value="logo1.png" />
+					</li>
+					<li>
+						<p>标题内容：</p>
+						<input class="box-title-text" type="text" value="袋鼠的故事" />
+					</li>
+					<li>
+						<p>标题文字颜色：</p>
+						<input class="title-text-color"  type="color" />
+					</li>
+					<li>
+						<p>标题字体大小：</p>
+						<input class="title-text-size" type="text" value="20" />
+					</li>
+					<li>
+						<p>段落文字颜色：</p>
+						<input class="text1-color" type="color" />
+					</li>
+					<li>
+						<p>段落文字大小：</p>
+						<input class="text1-size" type="text" value="16"/>
+					</li>
+					<li>
+						<p>段落文字行高：</p>
+						<input class="text1-height" type="text" value="24"/>
+					</li>
+					<li>
+						<p>段落1：</p>
+						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
+					</li>
+					<li>
+						<p>段落2：</p>
+						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
+					</li>
+					<li>
+						<p>段落3：</p>
+						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
+					</li>
+				</ul>
+				<button class="btn">保存</button>
+			</div>
+			<div class="template-right">
+				<h1>效果展示：</h1>
+				<div class="template-content">
+					<img class="logo" src="img/logo1.png" />
+					<h3 class="title-text">袋鼠的故事</h3>
+					<p class="text1 p1">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</p>
+					<p class="text1 p2">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</p>
+					<p class="text1 p3">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+$(function(){
+	$(".btn").click(function(){
+		//改变容器宽度
+		$(this).parents(".template").find(".template-content").css("width",$(this).siblings(".set-list").find(".boxwidth").val());
+		//改变容器背景图
+		$(this).parents(".template").find(".template-content").css("background","url(img/"+$(this).siblings(".set-list").find(".boxbackground").val()+") no-repeat center/100% 100%");
+		//改变logo图片
+		$(this).parents(".template").find(".logo").attr("src","img/"+$(this).siblings(".set-list").find(".logosrc").val());
+		//标题内容
+		$(this).parents(".template").find(".title-text").html($(this).siblings(".set-list").find(".box-title-text").val());
+		//标题字体大小
+		$(this).parents(".template").find(".title-text").css("font-size",$(this).siblings(".set-list").find(".title-text-size").val()+"px");
+		//段落字体大小
+		$(this).parents(".template").find(".text1").css("font-size",$(this).siblings(".set-list").find(".text1-size").val()+"px");
+		//段落字体行高
+		$(this).parents(".template").find(".text1").css("line-height",$(this).siblings(".set-list").find(".text1-height").val()+"px");
+		//段落1内容
+		$(this).parents(".template").find(".p1").html($(this).siblings(".set-list").find(".p1-text").val());
+		//段落2内容
+		$(this).parents(".template").find(".p2").html($(this).siblings(".set-list").find(".p2-text").val());
+		//段落3内容
+		$(this).parents(".template").find(".p3").html($(this).siblings(".set-list").find(".p3-text").val());
+	})
+	
+	//标题文字颜色
+	$(".title-text-color").change(function(){
+		$(this).parents(".template").find(".title-text").css("color",$(this).val());
+	})
+	//段落颜色
+	$(".text1-color").change(function(){
+		$(this).parents(".template").find(".text1").css("color",$(this).val());
+	})
+})
