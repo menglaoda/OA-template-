@@ -6,106 +6,107 @@
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/vue.min.js" ></script>
 	</head>
 	<body>
 		<div id="app">
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
-				<ul class="set-list">
-					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
-					</li>
-					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
-					</li>
-					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
-					</li>
-					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
-					</li>
-					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
-					</li>
-					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
-					</li>
-					<li>
-						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
-					</li>
-					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
-					</li>
-					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
-					</li>
-					<li>
-						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
-					</li>
-					<li>
-						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
-					</li>
-					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
-					</li>
-				</ul>
-				<button class="btn">保存</button>
+				<h1>1.使用前必读：</h1>
+				<h3 class="know">1.先把所需图片准备好并放入该项目下的<mark>img文件夹中</mark>，然后刷新网页。</h3>
+				<h3 class="know">2.图片大小尽量选择与模板图片大小一致的</h3>
 			</div>
 			<div class="template-right">
-				<h1>效果展示：</h1>
-				<div class="template-content">
-					<img class="logo" src="img/logo1.png" />
-					<h3 class="title-text">袋鼠的故事</h3>
-					<p class="text1 p1">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</p>
-					<p class="text1 p2">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</p>
-					<p class="text1 p3">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</p>
+				<h1>模板背景图片：</h1>
+				<h3 class="know">除了默认模板以外，还提供了下列模板，<mark>点击</mark></mark>以下图片切换模板，刷新网页切换回默认模板</h3>
+				<div class="template-list">
+					<img src="img/1.jpg" />
+					<img src="img/2.jpg" />
+					<img src="img/3.jpg" />
+					<img src="img/4.jpg" />
+					<img src="img/5.jpg" />
+					<img src="img/6.jpg" />
+				</div>
+				<h1>标题背景图片：</h1>
+				<div class="titleimg-list">
+					<img class="nobackground" src="img/3.png" />
+					<img src="img/1.png" />
+					<img src="img/2.png" />
+					<img src="img/4.png" />
+					<img src="img/5.jpg" />
+					<img src="img/6.jpg" />
 				</div>
 			</div>
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>2.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" v-model="w2" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
 					</li>									
 					<li>
 						<p>大标题内容：</p>
-						<input class="box-title-text" type="text" value="表彰大会" v-model="conference" />
+						<input class="box-title-text bzdh" type="text" value="表彰大会"  />
+					</li>
+					<li>
+						<p>大标题文字大小：</p>
+						<input class="box-title-text bzdh-size" type="text" value="60"  />
+					</li>
+					<li>
+						<p>大标题文字颜色：</p>
+						<input type="color" class="bzdh-color" />
 					</li>
 					<li>
 						<p>英文内容：</p>
-						<input class="box-title-text" type="text" value="You are invited to the meeting" v-model="english" />
+						<input class="box-title-text yw" type="text" value="You are invited to the meeting"  />
+					</li>
+					<li>
+						<p>英文字体大小：</p>
+						<input class="box-title-text yw-size" type="text" value="12"  />
+					</li>
+					<li>
+						<p>英文文字颜色：</p>
+						<input type="color" class="yw-color"/>
 					</li>
 					<li>
 						<p>小标题内容：</p>
-						<input class="box-title-text " type="text" value="~ 年度优秀员工表彰大会 ~" v-model="conference2"/>
+						<input class="box-title-text xbt" type="text" value="~ 年度优秀员工表彰大会 ~" />
+					</li>
+					<li>
+						<p>小标题字体大小：</p>
+						<input class="box-title-text xbt-size" type="text" value="22" />
+					</li>
+					<li>
+						<p>小标题文字颜色：</p>
+						<input type="color" class="xbt-color" />
 					</li>
 					<li>
 						<p>公司名称：</p>
-						<input class="box-title-text " type="text" value="深圳市深蓝软件南宁分公司" v-model="companyname"/>
+						<input class="box-title-text gs" type="text" value="深圳市深蓝软件南宁分公司" />
+					</li>
+					<li>
+						<p>公司字体大小：</p>
+						<input class="box-title-text gs-size" type="text" value="16" />
+					</li>
+					<li>
+						<p>公司名称文字颜色：</p>
+						<input type="color" class="gs-color"/>
 					</li>
 					<li>
 						<p>时间：</p>
-						<input class="box-title-text " type="text" value="2020.05.22" v-model="mytime"/>
+						<input class="box-title-text sj" type="text" value="2020.05.22" />
+					</li>
+					<li>
+						<p>时间字体大小：</p>
+						<input class="box-title-text sj-size" type="text" value="16" />
+					</li>
+					<li>
+						<p>时间文字颜色：</p>
+						<input type="color" class="sj-color"/>
 					</li>
 				</ul>
-				<button class="btn" v-on:click="fn2()">保存</button>
+				<button class="btn btn2">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
@@ -120,47 +121,86 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>3.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" v-model="w3" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
 					</li>									
 					<li>
 						<p>大标题内容：</p>
-						<input class="box-title-text" type="text" value="表彰通知" v-model="conference3" />
+						<input class="box-title-text dbt" type="text" value="表彰通知"  />
+					</li>
+					<li>
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
+					</li>
+					<li>
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
 						<p>称呼：</p>
-						<input class="box-title-text" type="text"  v-model="name3" />
+						<input class="box-title-text ch" type="text" value="公司各部门及全体员工："  />
+					</li>
+					<li>
+						<p>称呼字体大小：</p>
+						<input class="box-title-text ch-size" type="text" value="16"   />
+					</li>
+					<li>
+						<p>称呼文字颜色：</p>
+						<input type="color" class="ch-color"/>
 					</li>
 					<li>
 						<p>段落1：</p>
-						<input class="box-title-text " type="text"  v-model="w3p1"/>
+						<input class="box-title-text d1" type="text" value="***等同志入职以来工作兢兢业业、认真负责，并且吃苦耐劳，能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。" />
 					</li>
 					<li>
 						<p>段落2：</p>
-						<input class="box-title-text " type="text"  v-model="w3p2"/>
+						<input class="box-title-text d2" type="text" value="经公司研究决定，特提出表扬，并对以上人员进行嘉奖！" />
 					</li>
 					<li>
 						<p>段落3：</p>
-						<input class="box-title-text " type="text"  v-model="w3p3"/>
+						<input class="box-title-text d3" type="text" value="希望公司全体员工以他们为榜样，努力进取、团结协作，为公司的发展贡献自己的最大力量！" />
+					</li>
+					<li>
+						<p>段落字体大小：</p>
+						<input class="box-title-text d-size" type="text" value="16"  />
+					</li>
+					<li>
+						<p>段落文字颜色：</p>
+						<input type="color" class="d-color"/>
 					</li>
 					<li>
 						<p>公司：</p>
-						<input class="box-title-text " type="text"  v-model="companyname3"/>
+						<input class="box-title-text gs3" type="text" value="中网易企秀科技有限公司"  />
+					</li>
+					<li>
+						<p>公司字体大小：</p>
+						<input class="box-title-text gs3-size" type="text" value="16"  />
+					</li>
+					<li>
+						<p>公司文字颜色：</p>
+						<input type="color" class="gs3-color"/>
 					</li>
 					<li>
 						<p>时间：</p>
-						<input class="box-title-text " type="text"  v-model="mytime3"/>
+						<input class="box-title-text sj3" type="text" value="2019.04.25" />
+					</li>
+					<li>
+						<p>时间字体大小：</p>
+						<input class="box-title-text sj3-size" type="text" value="16"  />
+					</li>
+					<li>
+						<p>时间文字颜色：</p>
+						<input type="color" class="sj3-color"/>
 					</li>
 				</ul>
-				<button class="btn" v-on:click="fn3()">保存</button>
+				<button class="btn btn3" >保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
 				<div class="box-back w3">
-					<div class="box-back2"></div>
 					<div class="box-content">
 						<div class="content-title conference3">表彰通知</div>
 						<p class="text-left name3">公司各部门及全体员工：</p>
@@ -175,69 +215,92 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>4.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt" type="text" value="优秀员工"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片：</p>
+						<input class="box-title-text tp4" type="text"  value="obj1.jpg" />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp4-w" type="text"  value="10" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框颜色：</p>
+						<input type="color" class="tp4-color" />
+					</li>
+					<li>
+						<p>名称：</p>
+						<input class="box-title-text mc4" type="text"  value="王丽丽"/>
+					</li>
+					<li>
+						<p>名称字体大小：</p>
+						<input class="box-title-text mc4-size" type="text"  value="20"/>
+					</li>
+					<li>
+						<p>名称文字颜色：</p>
+						<input type="color" class="mc4-color"/>
+					</li>
+					<li>
+						<p>职务：</p>
+						<input class="box-title-text zw4" type="text"  value="霸道总裁"/>
+					</li>
+					<li>
+						<p>职务字体大小：</p>
+						<input class="box-title-text zw4-size" type="text"  value="14"/>
+					</li>
+					<li>
+						<p>职务文字颜色：</p>
+						<input type="color" class="zw4-color"/>
+					</li>
+					<li>
+						<p>横线粗细：</p>
+						<input class="box-title-text hx4" type="text"  value="1"/>
+					</li>
+					<li>
+						<p>横线颜色：</p>
+						<input type="color" class="hx4-color"/>
+					</li>
+					<li>
+						<p>段落：</p>
+						<input class="box-title-text dl4" type="text" value="***等同志入职以来工作兢兢业业、认真负责，并且吃苦耐劳，能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。" />
+					</li>
+					<li>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl4-size" type="text" value="14" />
 					</li>
 					<li>
 						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
-					</li>
-					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
-					</li>
-					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
-					</li>
-					<li>
-						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
-					</li>
-					<li>
-						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
-					</li>
-					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
+						<input type="color"  class="dl4-color"/>
 					</li>
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn4">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
-					<div class="box-back2"></div>
+				<div class="box-back w4">
 					<div class="box-content staff">
 						<div class="content-title">优秀员工</div>
-						<img src="img/obj1.jpg" />
-						<div class="myname">王丽丽</div>
+						<img class="img4" src="img/obj1.jpg" />
+						<div class="myname myname4">王丽丽</div>
 						<div class="duty">霸道总裁</div>
-						<div class="line"></div>
+						<div class="line myline4"></div>
 						<p class="text1 intro">***等同志入职以来工作兢兢业业、认真负责，并且吃苦耐劳，能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 					</div>
 				</div>
@@ -245,73 +308,88 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>5.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt" type="text" value="优秀员工"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片：</p>
+						<input class="box-title-text tp5" type="text" value="obj2.jpg"  />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp5-size" type="text" value="10" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框颜色：</p>
+						<input type="color"class="tp5-color" />
+					</li>
+					<li>
+						<p>名称：</p>
+						<input class="box-title-text mc5" type="text"  value="王小明 "/>
+					</li>
+					<li>
+						<p>名称字体大小：</p>
+						<input class="box-title-text mc5-size" type="text"  value="18"/>
+					</li>
+					<li>
+						<p>名称文字颜色：</p>
+						<input type="color" class="mc5-color"/>
+					</li>
+					<li>
+						<p>职务：</p>
+						<input class="box-title-text zw5" type="text"  value="公司宣传部 宣传干事"/>
+					</li>
+					<li>
+						<p>职务字体大小：</p>
+						<input class="box-title-text zw5-size" type="text"  value="14"/>
+					</li>
+					<li>
+						<p>职务文字颜色：</p>
+						<input type="color" class="zw5-color"/>
+					</li>
+					<li>
+						<p>段落内容：</p>
+						<input class="box-title-text dl5" type="text" value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。" />
+					</li>
+					<li>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl5-size" type="text" value="14" />
 					</li>
 					<li>
 						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
-					</li>
-					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
-					</li>
-					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
-					</li>
-					<li>
-						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
-					</li>
-					<li>
-						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
-					</li>
-					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
+						<input type="color" class="dl5-color"/>
 					</li>
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn5">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
-					<div class="box-back2"></div>
+				<div class="box-back w4">
 					<div class="box-content staff">
 						<div class="content-title">优秀员工</div>
 						<div class="staff-box">
-							<img src="img/obj2.jpg" />
+							<img class="img5" src="img/obj2.jpg" />
 							<div class="introduce-box">
 								<div class="duty-box">
-									<span class="myname">王小明</span>
-									<span class="myduty">公司宣传部 宣传干事</span>
+									<span class="myname myname5">王小明</span>
+									<span class="myduty myduty5">公司宣传部 宣传干事</span>
 								</div>
-								<p class="text1">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+								<p class="text1 intro5">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 							</div>
 						</div>
 					</div>
@@ -320,79 +398,102 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>6.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt" type="text" value="优秀员工"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片1：</p>
+						<input class="box-title-text tp6-1" type="text"  value="obj1.jpg" />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片2：</p>
+						<input class="box-title-text tp6-2" type="text"  value="obj1.jpg" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp6-size" type="text"  value="1" />
 					</li>
 					<li>
-						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
+						<p>图片边框颜色：</p>
+						<input type="color" class="tp6-color"/>
 					</li>
 					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
+						<p>名称1：</p>
+						<input class="box-title-text mc6-1" type="text"  value="王小明"/>
 					</li>
 					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
+						<p>名称2：</p>
+						<input class="box-title-text mc6-2" type="text"  value="王小明"/>
+					</li>
+					<li>
+						<p>名称字体大小：</p>
+						<input class="box-title-text mc6-size" type="text"  value="16"/>
+					</li>
+					<li>
+						<p>名称文字颜色：</p>
+						<input type="color" class="mc6-color"/>
 					</li>
 					<li>
 						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
+						<input class="box-title-text dl6-1" type="text"  value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。"/>
 					</li>
 					<li>
 						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
+						<input class="box-title-text dl6-2" type="text"  value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。"/>
 					</li>
 					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl6-size" type="text"  value="16"/>
 					</li>
+					<li>
+						<p>段落颜色：</p>
+						<input type="color" class="dl6-color"/>
+					</li>
+					<li>
+						<p>横线粗细：</p>
+						<input class="box-title-text hx6" type="text"  value="1"/>
+					</li>
+					<li>
+						<p>横线颜色：</p>
+						<input type="color" class="hx6-color"/>
+					</li>						
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn6">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
-					<div class="box-back2"></div>
+				<div class="box-back w4">
 					<div class="box-content staff">
 						<div class="content-title">优秀员工</div>
 						<div class="staff1">
 							<div>
-								<img src="img/obj1.jpg" />
-								<h4>王小明</h4>
+								<img class="img6 img6-1" src="img/obj1.jpg" />
+								<h4 class="myname6 myname6-1">王小明</h4>
 							</div>
-							<p>能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+							<p class="intro6 intro6-1">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 						</div>
-						<div class="line line1"></div>
+						<div class="line line1 myline6"></div>
 						<div class="staff1">
 							<div>
-								<img src="img/obj1.jpg" />
-								<h4>王小明</h4>
+								<img class="img6 img6-2" src="img/obj1.jpg" />
+								<h4 class="myname6 myname6-2">王小明</h4>
 							</div>
-							<p>能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+							<p class="intro6 intro6-2">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 						</div>
 					</div>
 				</div>
@@ -400,82 +501,105 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>7.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt" type="text" value="优秀员工"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片1：</p>
+						<input class="box-title-text tp7-1" type="text"  value="obj1.jpg" />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片2：</p>
+						<input class="box-title-text tp7-2" type="text"  value="obj1.jpg" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp7-size" type="text"  value="1" />
 					</li>
 					<li>
-						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
+						<p>图片边框颜色：</p>
+						<input type="color" class="tp7-color"/>
 					</li>
 					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
+						<p>名称1：</p>
+						<input class="box-title-text mc7-1" type="text"  value="王小明"/>
 					</li>
 					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
+						<p>名称2：</p>
+						<input class="box-title-text mc7-2" type="text"  value="王小明"/>
+					</li>
+					<li>
+						<p>名称字体大小：</p>
+						<input class="box-title-text mc7-size" type="text"  value="16"/>
+					</li>
+					<li>
+						<p>名称文字颜色：</p>
+						<input type="color" class="mc7-color"/>
 					</li>
 					<li>
 						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
+						<input class="box-title-text dl7-1" type="text"  value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。"/>
 					</li>
 					<li>
 						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
+						<input class="box-title-text dl7-2" type="text"  value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。"/>
 					</li>
 					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl7-size" type="text"  value="16"/>
 					</li>
+					<li>
+						<p>段落颜色：</p>
+						<input type="color" class="dl7-color"/>
+					</li>
+					<li>
+						<p>横线粗细：</p>
+						<input class="box-title-text hx7" type="text"  value="1"/>
+					</li>
+					<li>
+						<p>横线颜色：</p>
+						<input type="color" class="hx7-color"/>
+					</li>																
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn7">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
-					<div class="box-back2"></div>
+				<div class="box-back w4">
 					<div class="box-content staff">
 						<div class="content-title">优秀员工</div>
 						<div class="staff1 staff2">
 							<div>
-								<img src="img/obj1.jpg" />
+								<img class="img7 img7-1" src="img/obj1.jpg" />
 							</div>
 							<section>
-								<h4>王小明</h4>
-								<p>能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+								<h4 class="myname7 myname7-1">王小明</h4>
+								<p class="intro7 intro7-1">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 							</section>
 						</div>
-						<div class="line line1"></div>
+						<div class="line line1 myline7"></div>
 						<div class="staff1 staff2">
 							<section>
-								<h4>王小明</h4>
-								<p>能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+								<h4 class="myname7 myname7-2">王小明</h4>
+								<p class="intro7 intro7-2">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 							</section>
 							<div>
-								<img src="img/obj1.jpg" />
+								<img class="img7 img7-2" src="img/obj1.jpg" />
 							</div>
 						</div>
 					</div>
@@ -484,140 +608,131 @@
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>8.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt" type="text" value="优秀员工"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片：</p>
+						<input class="box-title-text tp8" type="text"  value="obj3.jpg" />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp8-size" type="text"  value="10" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框颜色：</p>
+						<input type="color" class="tp8-color"/>
 					</li>
 					<li>
-						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
+						<p>段落：</p>
+						<input class="box-title-text dl8" type="text"  value="能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。"/>
 					</li>
 					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl8-size" type="text"  value="16"/>
 					</li>
 					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
+						<p>段落颜色：</p>
+						<input type="color" class="dl8-color"/>
 					</li>
 					<li>
-						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
+						<p>横线粗细：</p>
+						<input class="box-title-text hx8" type="text"  value="1"/>
 					</li>
 					<li>
-						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
-					</li>
-					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
-					</li>
+						<p>横线颜色：</p>
+						<input type="color" class="hx8-color"/>
+					</li>	
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn8">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
-					<div class="box-back2"></div>
+				<div class="box-back w4">
 					<div class="box-content staff">
 						<div class="content-title">优秀员工</div>
-						<img class="obj3" src="img/obj3.jpg" />	
-						<div class="line line1 line2"></div>
-						<p class="p2">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
+						<img class="obj3 img8" src="img/obj3.jpg" />	
+						<div class="line line1 line2 myline8"></div>
+						<p class="p2 intro8">能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。能克服工作中的遇到的困难，深受领导和其他同事的好评。积极的工作态度体现了专业职业素养和极高的执行力。</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="template">
 			<div class="template-left">
-				<h1>参数设置：</h1>
+				<h1>9.参数设置：</h1>
 				<ul class="set-list">
 					<li>
-						<p>容器宽度：</p>
-						<input class="boxwidth" type="text" value="400" />
+						<p>模板宽度：</p>
+						<input class="boxwidth box2w" type="text" value="400"  />
+					</li>									
+					<li>
+						<p>大标题内容：</p>
+						<input class="box-title-text dbt " type="text" value="微信二维码"  />
 					</li>
 					<li>
-						<p>容器背景图：</p>
-						<input class="boxbackground" type="text" value="800.jpg" />
+						<p>大标题字体大小：</p>
+						<input class="box-title-text dbt-size" type="text" value="24"  />
 					</li>
 					<li>
-						<p>logo图片：</p>
-						<input class="logosrc" type="text" value="logo1.png" />
+						<p>大标题文字颜色：</p>
+						<input type="color" class="dbt-color"/>
 					</li>
 					<li>
-						<p>标题内容：</p>
-						<input class="box-title-text" type="text" value="袋鼠的故事" />
+						<p>图片：</p>
+						<input class="box-title-text tp9" type="text"  value="ma.jpg" />
 					</li>
 					<li>
-						<p>标题文字颜色：</p>
-						<input class="title-text-color"  type="color" />
+						<p>图片边框粗细：</p>
+						<input class="box-title-text tp9-size" type="text"  value="10" />
 					</li>
 					<li>
-						<p>标题字体大小：</p>
-						<input class="title-text-size" type="text" value="20" />
+						<p>图片边框颜色：</p>
+						<input type="color" class="tp9-color"/>
 					</li>
 					<li>
-						<p>段落文字颜色：</p>
-						<input class="text1-color" type="color" />
+						<p>段落：</p>
+						<input class="box-title-text dl9" type="text"  value="<<<<扫码关注我，获取更多信息>>>>"/>
 					</li>
 					<li>
-						<p>段落文字大小：</p>
-						<input class="text1-size" type="text" value="16"/>
+						<p>段落字体大小：</p>
+						<input class="box-title-text dl9-size" type="text"  value="16"/>
 					</li>
 					<li>
-						<p>段落文字行高：</p>
-						<input class="text1-height" type="text" value="24"/>
+						<p>段落颜色：</p>
+						<input type="color" class="dl9-color"/>
 					</li>
-					<li>
-						<p>段落1：</p>
-						<textarea class="p1-text" name="" rows="" cols="">一天动物园管理员发现袋鼠从笼子里跑出来了，于是开会讨论，一致认为是笼子的高度过低。所以他们决定将笼子的高度由原来的10米加高到20米。结果第二天他们发现袋鼠还是跑到外面来，所以他们又决定再将高度加高到30米。</textarea>
-					</li>
-					<li>
-						<p>段落2：</p>
-						<textarea class="p2-text" name="" rows="" cols="">没想到隔天居然又看到袋鼠全跑到外面，于是管理员们大为紧张，决定一不做二不休，将笼子的高度加高到100米。</textarea>
-					</li>
-					<li>
-						<p>段落3：</p>
-						<textarea class="p3-text" name="" rows="" cols="">一天长颈鹿和几只袋鼠们在闲聊，“你们看，这些人会不会再继续加高你们的笼子？长颈鹿问。“很难说。袋鼠说∶“如果他们再继续忘记关门的话！</textarea>
-					</li>
+			
 				</ul>
-				<button class="btn">保存</button>
+				<button class="btn btn9">保存</button>
 			</div>
 			<div class="template-right">
 				<h1>效果展示：</h1>
-				<div class="box-back">
+				<div class="box-back w5">
 					<div class="box-back2"></div>
 					<div class="box-content staff ostaff">
 						<div class="content-title">微信二维码</div>
-						<img class="obj3" src="img/ma.jpg" />	
-						<p class="p3"><<<<扫码关注我，获取更多信息>>>>></扫码关注我，获取更多信息></p>
+						<img class="obj3 img9" src="img/ma.jpg" />	
+						<p class="p3 intro9"><<<<扫码关注我，获取更多信息>>>></扫码关注我，获取更多信息></p>
 					</div>
 				</div>
 			</div>
 		</div>
 		</div>
 	</body>
-	<script src="js/02.js" type="text/javascript" charset="utf-8"></script>
 </html>

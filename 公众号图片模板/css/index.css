@@ -19,6 +19,9 @@
 .template-left{
 	border-right: solid 2px white;
 }
+.know{
+	margin-top: 10px;
+}
 .template-content{
 	width: 400px;
 	padding: 100px 0px;
@@ -30,6 +33,28 @@
 	align-items: center;
 	flex-direction: column;
 	
+}
+.template-list{
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: wrap;
+}
+.template-list img{
+	width: 120px;
+	height: 180px;
+	cursor: pointer;
+	margin: 10px 5px;
+}
+.titleimg-list{
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: wrap;
+}
+.titleimg-list img{
+	width: 130px;
+	height: 25px;
+	cursor: pointer;
+	margin: 10px 5px;
 }
 .logo{
 	position: absolute;
@@ -65,7 +90,6 @@
 	font-size: 18px;
 	width: 50%;
 	float: left;
-	
 	padding: 0px 30px;
 }
 .set-list input{
@@ -95,28 +119,18 @@
 }
 .box-back{
 	width: 400px;
-	height: 600px;
+	min-height: 600px;
 	margin: 30px auto;
 	position: relative;
-	background:url(../img/01.gif) no-repeat 0px 0px/100% 100%;
-}
-.box-back2{
-	width: 100%;
-	height: 600px;
-	background:url(../img/02.png) no-repeat 0px 0px/100% 100%;
-	opacity: 0.8;
+	background:url(../img/box02.jpg) no-repeat 0px 0px/100% 100%;
 }
 .box-content{
 	width: 90%;
 	height: 100%;
-	background: url(../img/04.png)no-repeat 0px 0px/100% ,url(../img/05.png)no-repeat bottom center/100% ,url(../img/03.png)no-repeat 0px 0px/100% 100%;
 	position: absolute;
 	top: 0px;
 	left: 5%;
 	padding: 20px;
-}
-.staff{
-	background: url(../img/08.png)no-repeat 50% 105%/40% ,url(../img/04.png)no-repeat 0px 0px/100% ,url(../img/05.png)no-repeat bottom center/100% ,url(../img/03.png)no-repeat 0px 0px/100% 100%;
 }
 .content-title{
 	width: 260px;
@@ -133,9 +147,13 @@
 }
 .box-content p{
 	color: red;
-	width: 100%;
+	width: 100%;	
+}
+.name3{
+	margin-bottom: 10px;
+}
+.box-content p:nth-child(-n+5){
 	line-height: 26px;
-	margin-top: 10px;
 }
 .box-content img{
 	border: solid 10px red;
@@ -209,8 +227,19 @@
 	margin-top: 4px;
 }
 .staff1 p{
-	text-indent: 32px;
-	padding: 0px 20px;
+	padding: 0px 0px 0px 20px;
+}
+.intro7-1{
+	padding: 0 !important;
+}
+.img7-1{
+	margin-right: 20px !important;
+}
+.intro7-2{
+	padding: 0 !important;
+}
+.img7-2{
+	margin-left: 20px !important;
 }
 .line1{
 	margin: 20px 0px;
@@ -237,16 +266,13 @@
 .p3{
 	text-align: center;
 }
-.ostaff{
-	background: url(../img/08.png) repeat-x bottom center/40px ,url(../img/04.png)no-repeat 0px 0px/100% ,url(../img/05.png)no-repeat bottom center/100% ,url(../img/03.png)no-repeat 0px 0px/100% 100%;
-}
 .boxfirst{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	color: #f5b745;
 	text-align: center;
-	background: url(../img/box.png) no-repeat 0px 0px/100% 100%;
+	background: url(../img/box01.jpg) no-repeat 0px 0px/100% 100%;
 }
 .boxfirst h2{	
 	font-size: 60px;
@@ -267,7 +293,9 @@
 	font-weight: 500;
 	margin-bottom: 10px;
 }
-.mytime3{
-	position: relative;
-	top: -16px;
+.w4{
+	background: url(../img/box03.jpg) no-repeat 0px 0px/100% 100%;
+}
+.w5{
+	background: url(../img/box04.jpg) no-repeat 0px 0px/100% 100%;
 }
