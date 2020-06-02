@@ -6,7 +6,7 @@
 .template{
 	width: 100%;
 	height: 100vh;
-	border: solid 4px gold;
+	border: solid 2px white;
 	display: flex;
 }
 .template-left,.template-right{
